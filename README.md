@@ -30,5 +30,8 @@ You can use the `Makefile` to automate tests, prepare builds, and run the app lo
 
 `make prepare`  # to prepare the images for build <br>
 `make build`    # to run the build command <br>
-`make run`      # to run build, test and run the server. <br>
+`make run`      # to run build, test, and run the server. <br>
+
+## Live Api Testing
+Download Postman and import `Home Assessment Kai Cyber.postman_collection.json` and test APIs with live data.
 
