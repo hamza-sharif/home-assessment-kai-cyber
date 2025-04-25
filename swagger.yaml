@@ -1,0 +1,68 @@
+swagger: '2.0'
+info:
+  title: Vulnerability Scan API
+  description: REST APIs for scanning and querying vulnerability scan results from GitHub.
+  version: 1.0.0
+
+paths:
+  /scan:
+    post:
+      summary: Scan files in a repository
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/ScanRequest'
+      responses:
+        '200':
+          description: Scan complete
+          schema:
+            format: json
+        '400':
+          description: Invalid request
+          schema:
+            format: string
+
+  /query:
+    post:
+      summary: Query stored scan results using filters
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            required:
+              - filters
+            properties:
+              filters:
+                type: object
+
+      responses:
+        '200':
+          description: List of matching results
+          schema:
+            type: object
+        '400':
+          description: Invalid filter
+          schema:
+            format: string
+
+definitions:
+  ScanRequest:
+    type: object
+    required:
+      - repo
+      - files
+    properties:
+      repo:
+        type: string
+        example: FASDFASD
+      files:
+        type: array
+        items:
+          type: string
+        example: ["filename1", "filename2"]
