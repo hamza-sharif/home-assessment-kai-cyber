@@ -8,15 +8,15 @@ A Go-based microservice that scans repositories with json files and save data in
 ### For Native (Go) Setup
 - Go 1.20+
 - SQLite3
-  `go build cmd/main.go`
-  `go test ./...`
-  `go run cmd/main.go`
+  `go build cmd/main.go` <br><br>
+  `go test ./...` <br>
+  `go run cmd/main.go` <br>
 
 ### For Docker Setup
-- Docker
+- Docker 
 - Docker Compose
-  `docker-compose up -d`  # to run the sevice in background
-  `docker-compose down`   # to stop the running server
+  `docker-compose up -d`    #   to run the sevice in background  <br>
+  `docker-compose down`   # to stop the running server<br>
 
 ---
 
@@ -26,7 +26,7 @@ You can use the `Makefile` to automate tests, prepare builds, and run the app lo
 
 ### Run Everything:
 
-`make prepare`  # to prepare the images for build
-`make build`    # to run the build command
-`make run`      # to run build, test and run the server.
+`make prepare`  # to prepare the images for build <br>
+`make build`    # to run the build command <br>
+`make run`      # to run build, test and run the server. <br>
 
