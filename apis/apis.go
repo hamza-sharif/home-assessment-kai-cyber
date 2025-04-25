@@ -6,10 +6,10 @@ import (
 	"github.com/hamza-sharif/home-assessment-kai-cyber/gen/restapi/operations"
 )
 
-type Apis *operations.KaiCyberHomeAssessmentAPI
+type Apis *operations.HomeAssessmentKaiCyberAPI
 
 func NewApis(rt *runtime.Runtime, spec *loads.Document) Apis {
-	apis := operations.NewKaiCyberHomeAssessmentAPI(spec)
+	apis := operations.NewHomeAssessmentKaiCyberAPI(spec)
 
 	apis.PostScanHandler = NewScan(rt)
 
